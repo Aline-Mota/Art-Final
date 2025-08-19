@@ -5,53 +5,64 @@ import ClientSlider from "../Elements/ClientSlider";
 import ServiceBox from "../Elements/ServiceBox";
 import FullButton from "../Buttons/FullButton";
 // Assets
-import AddImage1 from "../../assets/img/add/1.png";
-import AddImage2 from "../../assets/img/add/2.png";
-import AddImage3 from "../../assets/img/add/3.png";
-import AddImage4 from "../../assets/img/add/4.png";
+// import AddImage1 from "../../assets/img/add/1.png";
+// import AddImage2 from "../../assets/img/add/2.png";
+// import AddImage3 from "../../assets/img/add/3.png";
+// import AddImage4 from "../../assets/img/add/4.png";
 
 export default function Services() {
   return (
     <Wrapper id="services">
-      <div className="lightBg" style={{ padding: "50px 0" }}>
+      {/* <div className="lightBg" style={{ padding: "50px 0" }}>
         <div className="container">
           <ClientSlider />
         </div>
-      </div>
-      <div className="whiteBg" style={{ padding: "60px 0" }}>
+      </div> */}
+      <div className="whiteBg">
         <div className="container">
           <HeaderInfo>
             <h1 className="font40 extraBold">Conheça alguns de nossos serviços</h1>
-            <p className="font13">
+            {/* <p className="font13">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
               <br />
               labore et dolore magna aliquyam erat, sed diam voluptua.
-            </p>
+            </p> */}
           </HeaderInfo>
           <ServiceBoxRow className="flex">
             <ServiceBoxWrapper>
               <ServiceBox
-                icon="roller"
-                title="Portas e Janelas"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+                // icon="glassdoor"
+                title="Portas"
+                subtitle="Portas em vidro temperado, projetadas para oferecer segurança, elegância e funcionalidade. Disponíveis em modelos de abrir ou correr, sendo ideais para integrar ambientes e valorizar o espaço."
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox
-                icon="monitor"
-                title="Boxes"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
+                // icon="glasswindow"
+                title="Janelas"
+                subtitle="Janelas em vidro temperado, ideais para garantir luminosidade natural, ventilação e durabilidade. Opções de correr ou basculantes, com vedação eficiente e design sob medida."
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox
-                icon="browser"
+                // icon="mirror"
                 title="Espelhos"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
+                subtitle="Produzidos sob medida, ideais para ampliar ambientes e valorizar a decoração, com acabamentos polidos e lapidados para mais segurança e elegância."
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
-              <ServiceBox icon="printer" title="Sacadas" subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor." />
+              <ServiceBox
+                // icon="box"
+                title="Boxes"
+                subtitle="Modelos com Kit Elegance, Box de correr, pivotante ou com abertura lateral, que proporcionam design sofisticado, fácil manutenção e máxima durabilidade. Opções personalizadas para se adaptar ao seu espaço." 
+              />
+            </ServiceBoxWrapper>
+            <ServiceBoxWrapper>
+              <ServiceBox
+                // icon="balcony"
+                title="Sacadas"
+                subtitle="Fechamentos em Screen Glass, sistema panorâmico sem perfis verticais, que oferece ampla visibilidade, isolamento acústico e proteção contra vento e chuva." 
+              />
             </ServiceBoxWrapper>
           </ServiceBoxRow>
         </div>
@@ -60,21 +71,20 @@ export default function Services() {
             <Advertising className="flexSpaceCenter">
               <AddLeft>
                 <h4 className="font15 semiBold">Um pouco sobre nós...</h4>
-                <h2 className="font40 extraBold">15 anos no mercado</h2>
-                <p className="font12">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-                  diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                <h2 className="font40 extraBold">20 anos no mercado</h2>
+                <p className="font13">
+                  Há duas décadas atuando com dedicação e qualidade, oferecendo soluções sob medida para residências, comércios e indústrias. Combinando experiência, tecnologia e atendimento personalizado, conquistamos a confiança de nossos clientes e nos tornamos referência em nosso segmento.
                 </p>
                 <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0"}}>
                   <div style={{ width: "190px" }}>
-                    <FullButton title="Entrar em contato" action={() => alert("whatsapp")} />
+                    <FullButton title="Entrar em contato" action={() => { window.open("https://wa.me/5543998004784?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento!", "_blank", "noopener, noreferrer") }} />
                   </div>
                   {/* <div style={{ width: "190px", marginLeft: "15px" }}>
                     <FullButton title="Contact Us" action={() => alert("clicked")} border />
                   </div> */}
                 </ButtonsRow>
               </AddLeft>
-              <AddRight>
+              {/* <AddRight>
                 <AddRightInner>
                   <div className="flexNullCenter">
                     <AddImgWrapp1 className="flexCenter">
@@ -93,7 +103,7 @@ export default function Services() {
                     </AddImgWrapp4>
                   </div>
                 </AddRightInner>
-              </AddRight>
+              </AddRight> */}
             </Advertising>
           </div>
         </div>
@@ -113,7 +123,7 @@ const ServiceBoxRow = styled.div`
 const ServiceBoxWrapper = styled.div`
   width: 20%;
   margin-right: 5%;
-  padding: 80px 0;
+  padding: 0px;
   @media (max-width: 860px) {
     width: 100%;
     text-align: center;
@@ -126,7 +136,7 @@ const HeaderInfo = styled.div`
   }
 `;
 const Advertising = styled.div`
-  margin: 80px 0;
+  margin: 100px 0;
   padding: 100px 0;
   position: relative;
   @media (max-width: 1160px) {
@@ -139,14 +149,25 @@ const Advertising = styled.div`
   }
 `;
 const ButtonsRow = styled.div`
+  display: flex;
+  justify-content: center;
   @media (max-width: 860px) {
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+  button {
+    width: 100%;
+    max-width: 320px;
+    }
   }
 `;
 const AddLeft = styled.div`
   width: 50%;
+  text-align: center;
+  margin: 0 auto;
   p {
     max-width: 475px;
+    margin: 0 auto;
   }
   @media (max-width: 860px) {
     width: 80%;
@@ -155,6 +176,7 @@ const AddLeft = styled.div`
     h2 {
       line-height: 3rem;
       margin: 15px 0;
+      text-align: center;
     }
     p {
       margin: 0 auto;

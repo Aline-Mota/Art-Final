@@ -11,12 +11,10 @@ export default function Pricing() {
           <HeaderInfo>
             <h1 className="font40 extraBold">Por que nos escolher?</h1>
             <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-              <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
+              Tradição e dedicação é o que melhor define a Art Final. O nosso compromisso para com o seu projeto está além da entrega, vai de encontro com a sua confiança e satisfação.
             </p>
           </HeaderInfo>
-          <TablesWrapper className="flexSpaceNull">
+          {/* <TablesWrapper className="flexSpaceNull">
             <TableBox>
               <PricingTable
                 icon="roller"
@@ -44,7 +42,7 @@ export default function Pricing() {
                 action={() => alert("whatsapp")}
               />
             </TableBox>
-          </TablesWrapper>
+          </TablesWrapper> */}
         </div>
       </div>
     </Wrapper>
@@ -74,7 +72,3 @@ const TableBox = styled.div`
     margin: 0 auto
   }
 `;
-
-
-
-

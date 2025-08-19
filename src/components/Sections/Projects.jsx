@@ -10,7 +10,8 @@ import ProjectImg3 from "../../assets/img/projects/3.png";
 import ProjectImg4 from "../../assets/img/projects/4.png";
 import ProjectImg5 from "../../assets/img/projects/5.png";
 import ProjectImg6 from "../../assets/img/projects/6.png";
-import AddImage2 from "../../assets/img/add/add2.png";
+import AddImage2 from "../../assets/img/add/fachada.jpeg";
+import Pricing from "./Pricing";
 
 export default function Projects() {
   return (
@@ -19,32 +20,32 @@ export default function Projects() {
         <div className="container">
           <HeaderInfo>
             <h1 className="font40 extraBold">Alguns de nossos projetos</h1>
-            <p className="font13">
+            {/* <p className="font13">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
               <br />
               labore et dolore magna aliquyam erat, sed diam voluptua.
-            </p>
+            </p> */}
           </HeaderInfo>
           <div className="row textCenter">
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
                 img={ProjectImg1}
-                title="Awesome Project"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                // title="Awesome Project"
+                // text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
                 img={ProjectImg2}
-                title="Awesome Project"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                // title="Awesome Project"
+                // text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
                 img={ProjectImg3}
-                title="Awesome Project"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                // title="Awesome Project"
+                // text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
               />
             </div>
           </div>
@@ -52,28 +53,29 @@ export default function Projects() {
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
                 img={ProjectImg4}
-                title="Awesome Project"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                // title="Awesome Project"
+                // text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
                 img={ProjectImg5}
-                title="Awesome Project"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                // title="Awesome Project"
+                // text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
                 img={ProjectImg6}
-                title="Awesome Project"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                // title="Awesome Project"
+                // text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
               />
             </div>
           </div>
         </div>
       </div>
       <br/><br/>
+      <Pricing />
       <div className="lightBg">
         <div className="container">
           <Advertising className="flexSpaceCenter">
@@ -85,15 +87,15 @@ export default function Projects() {
               </AddLeftInner>
             </AddLeft>
             <AddRight>
-              <h4 className="font15 semiBold">Avenida São João 2898, Antares - Londrina/PR</h4>
+              <h4 className="font15 semiBold">Av. do Café, 45 - Novo Aeroporto - Londrina/PR</h4>
               <h2 className="font40 extraBold">Venha nos visitar</h2>
-              <p className="font12">
-                Estamos localizados na região leste de Londrina, atendemos de segunda à sexta das 08:00 às 18:00, e nos sábados entre às 09:00 e 12:00. <br/>
+              <p className="font13">
+                Estamos localizados na região leste de Londrina, atendemos de segunda à sexta das 08:00 às 18:00. <br/>
                 Estamos te esperando!
               </p>
               <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0" }}>
                 <div style={{ width: "190px" }}>
-                  <FullButton title="Entrar em contato" action={() => alert("whatsapp")} />
+                  <FullButton title="Entrar em contato" action={() => { window.open("https://wa.me/5543998004784?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento!", "_blank", "noopener, noreferrer") }} />
                 </div>
                 <div style={{ width: "190px", marginLeft: "15px" }}>
                   <FullButton title="Ver no mapa" action={() => window.open('https://www.google.com/maps/place/Vidra%C3%A7aria+Art+Final/@-23.3211015,-51.1382989,15z/data=!4m9!1m2!2m1!1sart+final+vidra%C3%A7aria!3m5!1s0x94eb43aeb0415d5b:0x705ed673cae9482d!8m2!3d-23.3193632!4d-51.1206825!15sChVhcnQgZmluYWwgdmlkcmHDp2FyaWFaFyIVYXJ0IGZpbmFsIHZpZHJhw6dhcmlhkgEVZ2xhc3NfYW5kX21pcnJvcl9zaG9w')} border />
@@ -129,8 +131,18 @@ const Advertising = styled.div`
   }
 `;
 const ButtonsRow = styled.div`
+  display: flex;
+  justify-content: center;
+
   @media (max-width: 860px) {
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    
+    button {
+      width: 100%;
+      max-width: 320px;
+    }
   }
 `;
 const AddLeft = styled.div`

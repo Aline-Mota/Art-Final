@@ -3,7 +3,7 @@ import styled from "styled-components";
 // Components
 import FullButton from "../Buttons/FullButton";
 // Assets
-import HeaderImage from "../../assets/img/header-img.png";
+import HeaderImage from "../../assets/img/banner.jpeg";
 import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
 
@@ -12,19 +12,18 @@ export default function Header() {
     <Wrapper id="home" className="container flexSpaceCenter">
       <LeftSide className="flexCenter">
         <div>
-          <h1 className="extraBold font60">Vidraçaria Art Final.</h1>
-          <HeaderP className="font13 semiBold">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-            voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+          <h1 className="extraBold font60">Vidraçaria Art Final</h1>
+          <HeaderP className="font13">
+            Transformamos projetos em realidade! Qualidade, segurança e acabamento para o seu lar, ou empresa.
           </HeaderP>
           <BtnWrapper>
-            <FullButton title="Quero entrar em contato" action={() => { alert("Whatsapp") }} />
+            <FullButton title="Entrar em contato" action={() => { window.open("https://wa.me/5543998004784?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento!", "_blank", "noopener, noreferrer") }} />
           </BtnWrapper>
         </div>
       </LeftSide>
       <RightSide>
         <ImageWrapper>
-          <Img className="radius8" src={HeaderImage} alt="office" style={{zIndex: 9}} />
+          <Img className="radius8" src={HeaderImage} alt="office" style={{zIndex: 9, height: "607px"}} />
           <DotsWrapper>
             <Dots />
           </DotsWrapper>
@@ -34,7 +33,6 @@ export default function Header() {
     </Wrapper>
   );
 }
-
 
 const Wrapper = styled.section`
   padding-top: 80px;
@@ -68,18 +66,19 @@ const RightSide = styled.div`
 `;
 const HeaderP = styled.div`
   max-width: 470px;
-  padding: 15px 0 50px 0;
-  line-height: 1.5rem;
+  padding: 15px 0 30px 0;
+  line-height: 1.3rem;
+  text-align: center;
+  margin: 0 auto;
   @media (max-width: 960px) {
-    padding: 15px 0 50px 0;
-    text-align: center;
+    padding: 15px 0 20px 0;
     max-width: 100%;
   }
 `;
 const BtnWrapper = styled.div`
   max-width: 190px;
+  margin: 0 auto;
   @media (max-width: 960px) {
-    margin: 0 auto;
   }
 `;
 const GreyDiv = styled.div`
@@ -140,5 +139,3 @@ const DotsWrapper = styled.div`
     display: none;
   }
 `;
-
-

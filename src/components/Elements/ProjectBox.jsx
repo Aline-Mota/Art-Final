@@ -22,7 +22,7 @@ const Wrapper = styled.div`
     margin: 20px 0;
   }
   h3 {
-    padding-bottom: 10px;
+    padding-bottom: 0px;
   }
 `;
 const ImgBtn = styled.button`

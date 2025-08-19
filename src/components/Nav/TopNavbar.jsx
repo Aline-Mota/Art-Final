@@ -65,7 +65,7 @@ export default function TopNavbar() {
           </UlWrapper>
           <UlWrapperRight className="flexNullCenter">
             <li className="semiBold font15 pointer flexCenter">
-              <FullButton title="Entrar em contato" action={() => { alert("Whatsapp") }} />
+              <FullButton title="Entrar em contato" action={() => { window.open("https://wa.me/5543998004784?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento!", "_blank", "noopener, noreferrer") }} />
             </li>
           </UlWrapperRight>
         </NavInner>
@@ -107,5 +107,3 @@ const UlWrapperRight = styled.ul`
     display: none;
   }
 `;
-
-

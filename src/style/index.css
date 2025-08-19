@@ -39,10 +39,10 @@
   }
   a {
     text-decoration: none!important;
-    color: #0B093B;
+    color: #007cc4;
   }
   a:hover {
-    color: #7620FF;
+    color: #104ba3;
   }
   input:-webkit-autofill {
     -webkit-box-shadow:0 0 0 50px #fff inset; /* Change the color to your own background color */
@@ -52,10 +52,11 @@
   body {
     background: #fff;
     color: #0B093B;
-    font-family: 'Khula', sans-serif;
+    font-family: 'Inter', sans-serif;
     overflow-x: hidden;
     font-size: 16px;
     font-weight: 400;
+    text-align: center;
   }
   .container {
     width: 100%;
@@ -104,8 +105,8 @@
     width: 100%;
   }
   .active {
-    border-bottom: 2px solid #7620FF;
-    color: #7620FF;
+    border-bottom: 2px solid #104ba3;
+    color: #104ba3;
   }
   .tag {
     padding: 5px 10px;
@@ -147,10 +148,11 @@
     font-size: 0.688rem;
   }
   .font12 {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
   .font13 {
-    font-size: 0.813rem;
+    font-size: 1rem;
+    padding: 15px 0px 0px 0px;
   }
   .font14 {
     font-size: 0.875rem;
@@ -255,7 +257,7 @@
     background-color: #F2B300;
   }
   .lightBg {
-    background-color: #F5F5F5;
+    background-color: #63ceff1a;
   }
   .coralBg {
     background-color: #C4FFFF;
